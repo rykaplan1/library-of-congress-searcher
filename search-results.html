@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library of Congress Searcher Search Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body id="results-body">
+    <section class="search-box" id="results-search-box">
+      <h1>Library of Congress Search Engine</h1>
+      <input type="text" placeholder="Enter keyword(s)..." class="search-term">
+      <select class="select-format">
+        <option value="">Select a format...</option>
+        <option value="maps">Maps</option>
+        <option value="audio">Audio Recordings</option>
+        <option value="photos">Photo, Print, Drawing</option>
+        <option value="manuscripts">Manuscripts/Mixed Material</option>
+        <option value="newspapers">Newspapers</option>
+        <option value="film-and-videos">Film, Videos</option>
+        <option value="notated-music">Printed Music/Sheet Music</option>
+        <option value="websites">Archived Websites</option>
+      </select>
+      <div class="button search-button">Search</div>
+      <div class="button" id="go-back-button">← Go back</div>
+    </section>
+    <section id="search-results">
+      <h2></h2>
+      <section id="results-scroller"></section>
+      <section id="page-nav">
+        <div class="button nav-button" id="first"><i class="fas fa-angle-double-left"></i></div>
+        <div class="button nav-button" id="previous"><i class="fas fa-angle-left"></i></div>
+        <div id="page-count"></div>
+        <div class="button nav-button" id="next"><i class="fas fa-angle-right"></i></div>
+        <div class="button nav-button" id="last"><i class="fas fa-angle-double-right"></i></div>
+      </section>
+    </section>
+    <div id="modal" title="Warning">
+      <p>Please enter at least one keyword.</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="assets/js/results-script.js"></script>
+    <script src="assets/js/search-listener.js"></script>
+  </body>
+</html>
